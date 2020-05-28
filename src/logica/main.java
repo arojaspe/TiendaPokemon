@@ -2,6 +2,8 @@ package logica;
 
 import datos.*;
 
+import java.io.ObjectStreamException;
+
 public class main {
     public static void main(String args[]){
 
@@ -64,9 +66,35 @@ public class main {
         Bayas b7 = new Bayas("Baya Perasi",10,"Los Pokémon pueden levarla o usarla para descongelarse.");
         Bayas b8 = new Bayas("Baya Gualot",11,"Si la lleva un Pokémon, debilita un ataque supereficaz de tipo Eléctrico de un enemigo.");
 
-        
+        //Instancias Objetos Clave
+        Obj_clave cl1 = new Obj_clave("Bici Acrobática",89,"Bici plegable ideal para saltar y hacer caballitos y giros.");
+        Obj_clave cl2 = new Obj_clave("Super Caña",50,"Increíble caña de pescar de alta tecnología. Pesca Pokémon salvajes en todo tipo de aguas.");
+        Obj_clave cl3 = new Obj_clave("Monedero",15,"Te servirá para llevar hasta 9999 fichas.");
+        Obj_clave cl4 = new Obj_clave("Caña Buena",20,"Caña de pescar nuevecita y de gran calidad. Pesca Pokémon salvajes en todo tipo de aguas.");
+        Obj_clave cl5 = new Obj_clave("Busca Obejtos",31,"Detector de objetos invisibles por ondas sonoras.");
+        Obj_clave cl6 = new Obj_clave("Camára Lucha",38,"Un fantástico dispositivo que graba combates entre amigos o celebrados en algún recinto especial.");
+        Obj_clave c17 = new Obj_clave("Planta Bayas",44,"Dispositivo portátil de cultivo que permite plantar Bayas en cualquier momento de forma sencilla.");
+        Obj_clave c18 = new Obj_clave("Regadera",10,"Objeto que contiene agua y se usa para regar las Bayas del Plantabayas.");
 
+        //Instancias PokeBalls
+        PokeBall k1 = new PokeBall("Ultra Ball",20,"oké Ball de rendimiento superior. Tiene un índice de éxito mayor al de la Super Ball.");
+        PokeBall k2 = new PokeBall("Super Ball",9,"Poké Ball de alto rendimiento. Tiene un índice de éxito superior al de la Poké Ball.");
+        PokeBall k3 = new PokeBall("Poké Ball",5,"Dispositivo con diseño capsular que atrapa Pokémon salvajes. Se lanza como una bola contra el blanco.");
+        PokeBall k4 = new PokeBall("Máster Ball",11,"La Poké Ball definitiva. Atrapa cualquier Pokémon salvaje y no falla nunca.");
+        PokeBall k5 = new PokeBall("Honor Ball",15,"Es una Poké Ball algo singular que se creó para conmemorar algún acontecimiento.");
+        PokeBall k6 = new PokeBall("Lujo Ball",18,"Acogedora Poké Ball que hace más amistosos a los Pokémon salvajes capturados.");
 
+        //Instancias Objetos
+        Objetos o1 = new Objetos("Agua Mística",67,"Gema con forma de gota de agua que fortalece los movimientos de tipo Agua. Debe lleverla un Pokémon.");
+        Objetos o2 = new Objetos("Diamansfera",18,"Una esfera brillante que potencia los movimientos de tipo Acero y Dragón. Debe llevarla Dialga.");
+        Objetos o3 = new Objetos("Gema Dragón",22,"Joya de un solo uso que potencia los movimientos de tipo Dragón. Debe llevarla un Pokémon.");
+        Objetos o4 = new Objetos("Huevo Suerte",15,"Es un huevo lleno de felicidad que te hace ganar Puntos de");
+        Objetos o5 = new Objetos("Hierva Unica",10,"Permite el uso inmediato de cualquier movimiento en el primer turno. Es de un solo uso y debe llevarla un Pokémon.");
+        Objetos o6 = new Objetos("Lutresfera",12,"Una bonita esfera que potencia los movimientos de tipo Dragón y Agua. Debe llevarla Palkia.");
+        Objetos o7 = new Objetos("Pañuelo Elegido",3,"Debe llevarlo un Pokémon. Potencia la Velocidad, pero solo permite usar un movimiento.");
+        Objetos o8 = new Objetos("Telescopio",80,"Debe llevarlo un Pokémon. Si se mueve después del enemigo, aumenta la Precisión del Pokémon.");
+        Objetos o9 = new Objetos("Roca Calor",77,"Prolonga la duración del movimiento Día Soleado que use el Pokémon que la lleva.");
+        Objetos o10 = new Objetos("Vidaesfera",76,"Potencia los movimientos, pero consume PS con cada ataque. Debe llevarla un Pokémon.");
 
 
     }
