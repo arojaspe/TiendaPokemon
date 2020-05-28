@@ -96,6 +96,20 @@ public class main {
         Objetos o9 = new Objetos("Roca Calor",77,"Prolonga la duración del movimiento Día Soleado que use el Pokémon que la lleva.");
         Objetos o10 = new Objetos("Vidaesfera",76,"Potencia los movimientos, pero consume PS con cada ataque. Debe llevarla un Pokémon.");
 
+        //Instancias evolución
+        Evolution e1 = new Evolution("Colmillo Agudo",20,"Si lo lleva un Pokémon cuando inflige daño a otro, puede hacer retroceder a este último.");
+        Evolution e2 = new Evolution("Diente Marino",30,"Tiene el brillo afilado de la plata y debe llevarlo Clamperl. Sube el Ataque Especial.");
+        Evolution e3 = new Evolution("Dizco Extraño",12,"Dispositivo transparente que contiene datos misteriosos. Es de fabricante desconocido.");
+        Evolution e4 = new Evolution("Escama Marina",13,"Tiene un débil brillo rosado y debe llevarla Clamperl. Sube la Defensa Especial.");
+        Evolution e5 = new Evolution("Piedra Alba",22,"Una piedra peculiar que hace evolucionar a algunos Pokémon. Brilla como un lucero.");
+        Evolution e6 = new Evolution("Piedra Solar",35,"Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es roja como el núcleo del sol.");
+        Evolution e7 = new Evolution("Protector",60,"Dispositivo de protección muy pesado. Cierto Pokémon lo adora.");
+        Evolution e8 = new Evolution("Revestimiento Métalico",86,"Película metálica que fortalece los ataques de tipo Acero. Debe llevarlo un Pokémon.");
+        Evolution e9 = new Evolution("Magmatizador",19,"Esta caja contiene una enorme cantidad de energía magmática. Cierto Pokémon lo adora.");
+        Evolution e10 = new Evolution("Tela Terrible",100,"Tela imbuida de una energía espiritual muy potente. Cierto Pokémon la adora.");
+
+
+
 
     }
 }
