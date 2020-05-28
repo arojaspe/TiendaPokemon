@@ -1,5 +1,5 @@
 package datos;
 
-public class Botiquin {
+public class Botiquin extends Producto{
 
 }
