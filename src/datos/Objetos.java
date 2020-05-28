@@ -1,5 +1,6 @@
 package datos;
 
-public class Objetos {
+public class Objetos extends Producto {
+	private String tipo;
 
 }
