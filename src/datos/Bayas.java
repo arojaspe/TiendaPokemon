@@ -1,6 +1,5 @@
 package datos;
 
 public class Bayas extends Producto {
-	private 
-
+	private String tipo;
 }
