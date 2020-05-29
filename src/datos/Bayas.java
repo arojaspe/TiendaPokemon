@@ -13,6 +13,6 @@ public class Bayas extends Producto implements imprimirObjetos {
 	public void mostrar() {
 		System.out.println("Nombre: "+this.nombre);
 		System.out.println("Precio: "+this.precio);
-		System.out.println("DescripciÃ³n: "+this.description);
+		System.out.println("Descripción: "+this.description);
 	}
 }
