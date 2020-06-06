@@ -2,128 +2,172 @@ package logica;
 
 import datos.*;
 
-import java.io.ObjectStreamException;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class main {
     public static void main(String args[]){
-    	
-    	//Instancias elementos Curación Estados
-    	HashMap<String, CuracionEstados> CuracionEstados = new HashMap<String, CuracionEstados>();
-    	CuracionEstados.put("c1", new CuracionEstados("Antihielo",8,"Medicina en espray que descongela a un Pokemon."));
-    	CuracionEstados.put("c2", new CuracionEstados("Antiparalizador",200,"Medicina en espray que cura a un Pokemon paralizado."));
-    	CuracionEstados.put("c3", new CuracionEstados("Antiquemar",40,"Medicina en espray que cura las quemaduras a un Pokemon."));
-    	CuracionEstados.put("c4", new CuracionEstados("Antídoto",20,"Medicina en espray que contrarresta los efectos del veneno en un Pokemon."));
-    	CuracionEstados.put("c5", new CuracionEstados("Anti-Covid19",100,"Te quita el covi y te hace inmune al 5G"));
-    	CuracionEstados.put("c6", new CuracionEstados("Galleta Lava",25,"Dulce típico de Pueblo Lavacalda que cura todos los problemas de estado de un Pokemon."));
-    	CuracionEstados.put("c7", new CuracionEstados("Galleta Yantra",30,"Especialidad de Ciudad Yantra. Cura los problemas de estado de un Pokemon."));
-    	CuracionEstados.put("c8", new CuracionEstados("Hierba Mental",67,"El Pokemon que la lleva se libera del enamoramiento. Solo puede usarse una vez."));
-    	CuracionEstados.put("c9", new CuracionEstados("Polvo Curación",44,"Polvos medicinales muy amargos que curan todos los problemas de estado de un Pokemon."));
-    	CuracionEstados.put("c10", new CuracionEstados("Porcehelado",32,"Especialidad de Ciudad Porcelana. Cura los problemas de estado de un Pokemon."));
-    	CuracionEstados.put("c11", new CuracionEstados("Refresco",15,"Chispeante bebida gaseosa que restaura 60 PS de un Pokemon."));
-    	CuracionEstados.put("c12", new CuracionEstados("Restaurar Todo",100,"Medicina que restaura todos los PS y cura todos los problemas de estado de un Pokemon."));
+
+        //Instancias elementos Curación Estados
+        CuracionEstados c1 = new CuracionEstados("Antihielo",8,"Medicina en espray que descongela a un Pokémon.");
+        CuracionEstados c2 = new CuracionEstados("Antiparalizador",200,"Medicina en espray que cura a un Pokémon paralizado.");
+        CuracionEstados c3 = new CuracionEstados("Antiquemar",40,"Medicina en espray que cura las quemaduras a un Pokémon.");
+        CuracionEstados c4 = new CuracionEstados("Antídoto",20,"Medicina en espray que contrarresta los efectos del veneno en un Pokémon.");
+        CuracionEstados c5 = new CuracionEstados("Antí-Covid19",100,"Te quita el covi");
+        CuracionEstados c6 = new CuracionEstados("Galleta Lava",25,"Dulce típico de Pueblo Lavacalda que cura todos los problemas de estado de un Pokémon.");
+        CuracionEstados c7 = new CuracionEstados("Galleta Yantra",30,"Especialidad de Ciudad Yantra. Cura los problemas de estado de un Pokémon.");
+        CuracionEstados c8 = new CuracionEstados("Hierba Mental",67,"El Pokémon que la lleva se libera del enamoramiento. Solo puede usarse una vez.");
+        CuracionEstados c9 = new CuracionEstados("Polvo Curación",44,"Polvos medicinales muy amargos que curan todos los problemas de estado de un Pokémon.");
+        CuracionEstados c10 = new CuracionEstados("Porcehelado",32,"Especialidad de Ciudad Porcelana. Cura los problemas de estado de un Pokémon.");
+        CuracionEstados c11 = new CuracionEstados("Refresco",15,"Chispeante bebida gaseosa que restaura 60 PS de un Pokémon.");
+        CuracionEstados c12 = new CuracionEstados("Restaurar Todo",100,"Medicina que restaura todos los PS y cura todos los problemas de estado de un Pokémon.");
+        HashMap<String, CuracionEstados> CuracionEstados = new HashMap<String, CuracionEstados>();
+        CuracionEstados.put("Antihielo", c1); CuracionEstados.put("Antiparalizador", c2); CuracionEstados.put("Antiquemar", c3);
+        CuracionEstados.put("Antídoto",c4 ); CuracionEstados.put("Antí-Covid19", c5 ); CuracionEstados.put("Galleta Lava", c6);
+        CuracionEstados.put("Galleta Yantra", c7); CuracionEstados.put("Hierba Mental", c8 ); CuracionEstados.put("Polvo curación", c9 );
+        CuracionEstados.put("Porcehelado", c10 ); CuracionEstados.put("Refresco", c11 ); CuracionEstados.put("Restaurar Todo", c12 );
 
 
         //Instancias elementos Recuperar Vitalidad
-    	HashMap<String, RecuperarVitalidad> RecuperarVitalidad = new HashMap<String, RecuperarVitalidad>();
-        RecuperarVitalidad.put("r1", new RecuperarVitalidad("Poción",22,"Medicina en espray que cura heridas y restaura 20 PS a un Pokemon."));
-        RecuperarVitalidad.put("r2", new RecuperarVitalidad("Revivir", 19,"Medicina que revive a un Pokemon debilitado y le devuelve la mitad de sus PS."));
-        RecuperarVitalidad.put("r3", new RecuperarVitalidad("Superpoción",100,"Medicina en espray que cura heridas y restaura 50 PS de un Pokemon."));
-        RecuperarVitalidad.put("r4", new RecuperarVitalidad("Limonada",6,"Bebida muy dulce que restaura 80 PS de un Pokemon."));
-        RecuperarVitalidad.put("r5", new RecuperarVitalidad("Leche Mu-mu",12,"Leche de alto valor nutritivo que restaura 100 PS de un Pokemon."));
-        RecuperarVitalidad.put("r6", new RecuperarVitalidad("Caramelo Raro",9990,"Caramelo energético que sube a un Pokemon de nivel."));
-        RecuperarVitalidad.put("r7", new RecuperarVitalidad("Agua Fresca",2,"Agua de alto contenido mineral que restaura 50 PS de un Pokemon."));
-        RecuperarVitalidad.put("r8", new RecuperarVitalidad("Hiperpoción",101,"Medicina en espray que cura heridas y restaura 200 PS de un Pokemon."));
-        RecuperarVitalidad.put("r9", new RecuperarVitalidad("Raíz Energía",105,"Raíz muy amarga que restaura 200 PS de un Pokemon."));
+        RecuperarVitalidad r1 = new RecuperarVitalidad("Poción",22,"Medicina en espray que cura heridas y restaura 20 PS a un Pokémon.");
+        RecuperarVitalidad r2 = new RecuperarVitalidad("Revivir", 19,"Medicina que revive a un Pokémon debilitado y le devuelve la mitad de sus PS.");
+        RecuperarVitalidad r3 = new RecuperarVitalidad("Superpoción",100,"Medicina en espray que cura heridas y restaura 50 PS de un Pokémon.");
+        RecuperarVitalidad r4 = new RecuperarVitalidad("Limonada",6,"Bebida muy dulce que restaura 80 PS de un Pokémon.");
+        RecuperarVitalidad r5 = new RecuperarVitalidad("Leche Mu-mu",12,"Leche de alto valor nutritivo que restaura 100 PS de un Pokémon.");
+        RecuperarVitalidad r6 = new RecuperarVitalidad("Caramelo Raro",99,"Caramelo energético que sube a un Pokémon de nivel.");
+        RecuperarVitalidad r7 = new RecuperarVitalidad("Agua Fresca",2,"Agua de alto contenido mineral que restaura 50 PS de un Pokémon.");
+        RecuperarVitalidad r8 = new RecuperarVitalidad("Hiperpoción",101,"Medicina en espray que cura heridas y restaura 200 PS de un Pokémon.");
+        RecuperarVitalidad r9 = new RecuperarVitalidad("Raíz Energía",105,"Raíz muy amarga que restaura 200 PS de un Pokémon.");
+        HashMap<String, RecuperarVitalidad> RecuperarVitalidad = new HashMap<String, RecuperarVitalidad>();
+        RecuperarVitalidad.put("Pocion", r1); RecuperarVitalidad.put("Revivir", r2 ); RecuperarVitalidad.put("Superpocion", r3);
+        RecuperarVitalidad.put("Limonada", r4); RecuperarVitalidad.put("Leche Mu-mu", r5); RecuperarVitalidad.put("Caramelo Raro", r6);
+        RecuperarVitalidad.put("Agua Fresca", r7); RecuperarVitalidad.put("Hiperpoción", r8); RecuperarVitalidad.put("Raíz Energía", r9);
 
         //Instancias elementos Recuperar
+        CambioPP p1 = new CambioPP("Elixir",10,"Restaura 10 PP de todos los movimientos aprendidos por el Pokémon elegido.");
+        CambioPP p2 = new CambioPP("Elixir Maximo", 20,"Restaura completamente los PP de todos los movimientos aprendidos por el Pokémon elegido.");
+        CambioPP p3 = new CambioPP("Éter",20,"Restaura 10 PP del movimiento elegido de un Pokémon.");
+        CambioPP p4 = new CambioPP("Éter Maximo",30,"Restaura completamente los PP del movimiento elegido de un Pokémon.");
+        CambioPP p5 = new CambioPP("Más PP",38,"Aumenta ligeramente los PP máximos del movimiento elegido de un Pokémon.");
+        CambioPP p6 = new CambioPP("PP Máximos",56,"Aumenta hasta el límite los PP máximos del movimiento elegido de un Pokémon.");
         HashSet<CambioPP> CambioPP = new HashSet<CambioPP>();
-        CambioPP.add(new CambioPP("Elixir",10,"Restaura 10 PP de todos los movimientos aprendidos por el Pokemon elegido."));
-        CambioPP.add(new CambioPP("Elixir Maximo", 20,"Restaura completamente los PP de todos los movimientos aprendidos por el Pokemon elegido."));
-        CambioPP.add(new CambioPP("Éter",20,"Restaura 10 PP del movimiento elegido de un Pokemon."));
-        CambioPP.add(new CambioPP("Éter Maximo",30,"Restaura completamente los PP del movimiento elegido de un Pokemon."));
-        CambioPP.add(new CambioPP("Más PP",38,"Aumenta ligeramente los PP máximos del movimiento elegido de un Pokemon."));
-        CambioPP.add(new CambioPP("PP Máximos",56,"Aumenta hasta el límite los PP máximos del movimiento elegido de un Pokemon."));
+        CambioPP.add(p1); CambioPP.add(p2); CambioPP.add(p3); CambioPP.add(p4); CambioPP.add(p5); CambioPP.add(p6);
 
-       //Instancias Mejora de estadísticas
+        //Instancias Mejora de estadísticas
+        MejorarEstadisticas m1 = new MejorarEstadisticas("Ataque X",89,"Aumenta el Ataque en combate. Al intercambiar de Pokémon, el efecto desaparece.");
+        MejorarEstadisticas m2 = new MejorarEstadisticas("Calcio",44,"Nutritiva bebida que potencia el Ataque Especial de base de un Pokémon.");
+        MejorarEstadisticas m3 = new MejorarEstadisticas("Carburante",54,"Nutritiva bebida que potencia la Velocidad de base de un Pokémon.");
+        MejorarEstadisticas m4 = new MejorarEstadisticas("Defenza Espacial X",99,"Aumenta la Defensa Especial en combate. Al cambiar de Pokémon, el efecto desaparece.");
+        MejorarEstadisticas m5 = new MejorarEstadisticas("Defenza X",101,"Aumenta la Defensa en combate. Al cambiar de Pokémon, el efecto desaparece.");
+        MejorarEstadisticas m6 = new MejorarEstadisticas("Velocidad X",110,"Aumenta la Velocidad en combate. Al cambiar de Pokémon, el efecto desaparece.");
+        MejorarEstadisticas m7 = new MejorarEstadisticas("Precisión X",98,"Aumenta la Precisión de los ataques en combate. Al cambiar de Pokémon, el efecto desaparece.");
+        MejorarEstadisticas m8 = new MejorarEstadisticas("Pluma Mente",126,"Pluma que aumenta un poco la Defensa Especial de base de un Pokémon.");
+        MejorarEstadisticas m9 = new MejorarEstadisticas("Pluma Músculo",99,"Pluma que aumenta un poco el Ataque de base de un Pokémon.");
+        MejorarEstadisticas m10 = new MejorarEstadisticas("Pluma Vigor",100,"Pluma que aumenta un poco los PS de base de un Pokémon");
+        MejorarEstadisticas m11 = new MejorarEstadisticas("Pluma Aguante",111,"Pluma que aumenta un poco la Defensa de base de un Pokémon.");
+        MejorarEstadisticas m12 = new MejorarEstadisticas("Pluma ímpetu",113,"Pluma que aumenta un poco la Velocidad de base de un Pokémon.");
+        MejorarEstadisticas m13 = new MejorarEstadisticas("Pluma Intelecto",140,"Pluma que aumenta un poco el Ataque Especial de base de un Pokémon.");
+        MejorarEstadisticas m14 = new MejorarEstadisticas("Hierro",50,"Nutritiva bebida que potencia la Defensa de base de un Pokémon.");
         HashSet<MejorarEstadisticas> MejorarEstadisticas = new HashSet<MejorarEstadisticas>();
-        MejorarEstadisticas.add(new MejorarEstadisticas("Ataque X",89,"Aumenta el Ataque en combate. Al intercambiar de Pokemon, el efecto desaparece."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Calcio",44,"Nutritiva bebida que potencia el Ataque Especial de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Carburante",54,"Nutritiva bebida que potencia la Velocidad de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Defenza Espacial X",99,"Aumenta la Defensa Especial en combate. Al cambiar de Pokemon, el efecto desaparece."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Defenza X",101,"Aumenta la Defensa en combate. Al cambiar de Pokemon, el efecto desaparece."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Velocidad X",110,"Aumenta la Velocidad en combate. Al cambiar de Pokemon, el efecto desaparece."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Precisión X",98,"Aumenta la Precisión de los ataques en combate. Al cambiar de Pokemon, el efecto desaparece."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma Mente",126,"Pluma que aumenta un poco la Defensa Especial de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma Músculo",99,"Pluma que aumenta un poco el Ataque de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma Vigor",100,"Pluma que aumenta un poco los PS de base de un Pokemon"));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma Aguante",111,"Pluma que aumenta un poco la Defensa de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma ímpetu",113,"Pluma que aumenta un poco la Velocidad de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Pluma Intelecto",140,"Pluma que aumenta un poco el Ataque Especial de base de un Pokemon."));
-        MejorarEstadisticas.add(new MejorarEstadisticas("Hierro",50,"Nutritiva bebida que potencia la Defensa de base de un Pokemon."));
+        MejorarEstadisticas.add(m1); MejorarEstadisticas.add(m2); MejorarEstadisticas.add(m3); MejorarEstadisticas.add(m4); MejorarEstadisticas.add(m5); MejorarEstadisticas.add(m6);
+        MejorarEstadisticas.add(m7); MejorarEstadisticas.add(m8); MejorarEstadisticas.add(m9); MejorarEstadisticas.add(m10); MejorarEstadisticas.add(m11); MejorarEstadisticas.add(m12);
+        MejorarEstadisticas.add(m13); MejorarEstadisticas.add(m14);
 
         //Instancias Bayas
+        Bayas b1 = new Bayas("Baya Atania",12,"Los Pokémon pueden llevarla o usarla para despertar del sueño.");
+        Bayas b2 = new Bayas("Baya Zreza",16,"Los Pokémon pueden llevarla o usarla para recuperarse de los parálisis");
+        Bayas b3 = new Bayas("Baya Meloc",19,"Los Pokémon pueden llevarla o usarla para curarse del envenenamiento.");
+        Bayas b4 = new Bayas("Baya Aranja",5,"Los Pokémon pueden llevarla o usarla para restaurar 10PS.");
+        Bayas b5 = new Bayas("Baya Peragu",2,"Uno de los famosos ingredientes para preparar Pokochos, los dulces para Pokémon de la región de Sinnoh.");
+        Bayas b6 = new Bayas("Baya Latano",3,"Uno de los famosos ingredientes para preparar Pokochos, los dulces para Pokémon de la región de Sinnoh.");
+        Bayas b7 = new Bayas("Baya Perasi",10,"Los Pokémon pueden levarla o usarla para descongelarse.");
+        Bayas b8 = new Bayas("Baya Gualot",11,"Si la lleva un Pokémon, debilita un ataque supereficaz de tipo Eléctrico de un enemigo.");
         TreeMap<String, Bayas> Bayas = new TreeMap<String, Bayas>();
-        Bayas.put("b1", new Bayas("Baya Atania",12,"Los Pokemon pueden llevarla o usarla para despertar del sueño."));
-        Bayas.put("b2", new Bayas("Baya Zreza",16,"Los Pokemon pueden llevarla o usarla para recuperarse de los parálisis"));
-        Bayas.put("b3", new Bayas("Baya Meloc",19,"Los Pokemon pueden llevarla o usarla para curarse del envenenamiento."));
-        Bayas.put("b4", new Bayas("Baya Aranja",5,"Los Pokemon pueden llevarla o usarla para restaurar 10PS."));
-        Bayas.put("b5", new Bayas("Baya Peragu",2,"Uno de los famosos ingredientes para preparar Pokochos, los dulces para Pokemon de la región de Sinnoh."));
-        Bayas.put("b6", new Bayas("Baya Latano",3,"Uno de los famosos ingredientes para preparar Pokochos, los dulces para Pokemon de la región de Sinnoh."));
-        Bayas.put("b7", new Bayas("Baya Perasi",10,"Los Pokemon pueden levarla o usarla para descongelarse."));
-        Bayas.put("b8", new Bayas("Baya Gualot",11,"Si la lleva un Pokemon, debilita un ataque supereficaz de tipo Eléctrico de un enemigo."));
+        Bayas.put("Baya Atania",b1); Bayas.put("Baya Zreza", b2); Bayas.put("Baya Meloc", b3); Bayas.put("Baya Aranja", b4);
+        Bayas.put("Baya Peragu", b5); Bayas.put("Baya Latano", b6); Bayas.put("Baya Perasi", b7); Bayas.put("Baya Gualot", b8);
 
         //Instancias Objetos Clave
-        TreeSet<Obj_clave> Obj_clave = new TreeSet<Obj_clave>(); 
-        Obj_clave.add(new Obj_clave("Bici Acrobática",89,"Bici plegable ideal para saltar y hacer caballitos y giros."));
-        Obj_clave.add(new Obj_clave("Super Caña",50,"Increíble cañaa de pescar de alta tecnología. Pesca Pokemon salvajes en todo tipo de aguas."));
-        Obj_clave.add(new Obj_clave("Monedero",15,"Te servirá para llevar hasta 9999 fichas."));
-        Obj_clave.add(new Obj_clave("Caña Buena",20,"Caña de pescar nuevecita y de gran calidad. Pesca Pokemon salvajes en todo tipo de aguas."));
-        Obj_clave.add(new Obj_clave("Busca Obejtos",31,"Detector de objetos invisibles por ondas sonoras."));
-        Obj_clave.add(new Obj_clave("Camára Lucha",38,"Un fantástico dispositivo que graba combates entre amigos o celebrados en algún recinto especial."));
-        Obj_clave.add(new Obj_clave("Planta Bayas",44,"Dispositivo portátil de cultivo que permite plantar Bayas en cualquier momento de forma sencilla."));
-        Obj_clave.add(new Obj_clave("Regadera",10,"Objeto que contiene agua y se usa para regar las Bayas del Plantabayas."));
+        Obj_clave cl1 = new Obj_clave("Bici Acrobática",89,"Bici plegable ideal para saltar y hacer caballitos y giros.");
+        Obj_clave cl2 = new Obj_clave("Super Caña",50,"Increíble caña de pescar de alta tecnología. Pesca Pokémon salvajes en todo tipo de aguas.");
+        Obj_clave cl3 = new Obj_clave("Monedero",15,"Te servirá para llevar hasta 9999 fichas.");
+        Obj_clave cl4 = new Obj_clave("Caña Buena",20,"Caña de pescar nuevecita y de gran calidad. Pesca Pokémon salvajes en todo tipo de aguas.");
+        Obj_clave cl5 = new Obj_clave("Busca Obejtos",31,"Detector de objetos invisibles por ondas sonoras.");
+        Obj_clave cl6 = new Obj_clave("Camára Lucha",38,"Un fantástico dispositivo que graba combates entre amigos o celebrados en algún recinto especial.");
+        Obj_clave cl7 = new Obj_clave("Planta Bayas",44,"Dispositivo portátil de cultivo que permite plantar Bayas en cualquier momento de forma sencilla.");
+        Obj_clave cl8 = new Obj_clave("Regadera",10,"Objeto que contiene agua y se usa para regar las Bayas del Plantabayas.");
+        TreeSet<Obj_clave> Obj_clave = new TreeSet<Obj_clave>();
+        Obj_clave.add(cl1); Obj_clave.add(cl2); Obj_clave.add(cl3); Obj_clave.add(cl4);
+        Obj_clave.add(cl5); Obj_clave.add(cl6); Obj_clave.add(cl7); Obj_clave.add(cl8);
 
         //Instancias PokeBalls
+        PokeBall k1 = new PokeBall("Ultra Ball",20,"oké Ball de rendimiento superior. Tiene un índice de éxito mayor al de la Super Ball.");
+        PokeBall k2 = new PokeBall("Super Ball",9,"Poké Ball de alto rendimiento. Tiene un índice de éxito superior al de la Poké Ball.");
+        PokeBall k3 = new PokeBall("Poké Ball",5,"Dispositivo con diseño capsular que atrapa Pokémon salvajes. Se lanza como una bola contra el blanco.");
+        PokeBall k4 = new PokeBall("Máster Ball",11,"La Poké Ball definitiva. Atrapa cualquier Pokémon salvaje y no falla nunca.");
+        PokeBall k5 = new PokeBall("Honor Ball",15,"Es una Poké Ball algo singular que se creó para conmemorar algún acontecimiento.");
+        PokeBall k6 = new PokeBall("Lujo Ball",18,"Acogedora Poké Ball que hace más amistosos a los Pokémon salvajes capturados.");
         TreeMap<String, PokeBall> PokeBall = new TreeMap<String, PokeBall>();
-        PokeBall.put("k1", new PokeBall("Poké Ball",5,"Dispositivo con diseño capsular que atrapa Pokemon salvajes. Se lanza como una bola contra el blanco."));
-        PokeBall.put("k2", new PokeBall("Super Ball",9,"Poké Ball de alto rendimiento. Tiene un índice de éxito superior al de la Poké Ball."));
-        PokeBall.put("k3", new PokeBall("Ultra Ball",20,"oké Ball de rendimiento superior. Tiene un índice de éxito mayor al de la Super Ball."));
-        PokeBall.put("k4", new PokeBall("Lujo Ball",18,"Acogedora Poké Ball que hace más amistosos a los Pokemon salvajes capturados."));
-        PokeBall.put("k5", new PokeBall("Honor Ball",15,"Es una Poké Ball algo singular que se creó para conmemorar algún acontecimiento."));
-        PokeBall.put("k6", new PokeBall("Máster Ball",2150,"La Poké Ball definitiva. Atrapa cualquier Pokemon salvaje y no falla nunca."));
+        PokeBall.put("Ultra Ball", k1); PokeBall.put("Super Ball", k2); PokeBall.put("Poké Ball", k3);
+        PokeBall.put("Máster Ball", k4); PokeBall.put("Honor Ball", k5);  PokeBall.put("Lujo Ball", k6);
 
         //Instancias Objetos
+        Objetos o1 = new Objetos("Agua Mística",67,"Gema con forma de gota de agua que fortalece los movimientos de tipo Agua. Debe lleverla un Pokémon.");
+        Objetos o2 = new Objetos("Diamansfera",18,"Una esfera brillante que potencia los movimientos de tipo Acero y Dragón. Debe llevarla Dialga.");
+        Objetos o3 = new Objetos("Gema Dragón",22,"Joya de un solo uso que potencia los movimientos de tipo Dragón. Debe llevarla un Pokémon.");
+        Objetos o4 = new Objetos("Huevo Suerte",15,"Es un huevo lleno de felicidad que te hace ganar Puntos de");
+        Objetos o5 = new Objetos("Hierva Unica",10,"Permite el uso inmediato de cualquier movimiento en el primer turno. Es de un solo uso y debe llevarla un Pokémon.");
+        Objetos o6 = new Objetos("Lutresfera",12,"Una bonita esfera que potencia los movimientos de tipo Dragón y Agua. Debe llevarla Palkia.");
+        Objetos o7 = new Objetos("Pañuelo Elegido",3,"Debe llevarlo un Pokémon. Potencia la Velocidad, pero solo permite usar un movimiento.");
+        Objetos o8 = new Objetos("Telescopio",80,"Debe llevarlo un Pokémon. Si se mueve después del enemigo, aumenta la Precisión del Pokémon.");
+        Objetos o9 = new Objetos("Roca Calor",77,"Prolonga la duración del movimiento Día Soleado que use el Pokémon que la lleva.");
+        Objetos o10 = new Objetos("Vidaesfera",76,"Potencia los movimientos, pero consume PS con cada ataque. Debe llevarla un Pokémon.");
         TreeSet<Objetos> Objetos = new TreeSet<Objetos>();
-        Objetos.add(new Objetos("Agua Mística",67,"Gema con forma de gota de agua que fortalece los movimientos de tipo Agua. Debe lleverla un Pokemon."));
-        Objetos.add(new Objetos("Diamansfera",18,"Una esfera brillante que potencia los movimientos de tipo Acero y Dragón. Debe llevarla Dialga."));
-        Objetos.add(new Objetos("Gema Dragón",22,"Joya de un solo uso que potencia los movimientos de tipo Dragón. Debe llevarla un Pokemon."));
-        Objetos.add(new Objetos("Huevo Suerte",15,"Es un huevo lleno de felicidad que te hace ganar Puntos de"));
-        Objetos.add(new Objetos("Hierva Unica",10,"Permite el uso inmediato de cualquier movimiento en el primer turno. Es de un solo uso y debe llevarla un Pokemon."));
-        Objetos.add(new Objetos("Lutresfera",12,"Una bonita esfera que potencia los movimientos de tipo Dragón y Agua. Debe llevarla Palkia."));
-        Objetos.add(new Objetos("Pañuelo Elegido",3,"Debe llevarlo un Pokemon. Potencia la Velocidad, pero solo permite usar un movimiento."));
-        Objetos.add(new Objetos("Telescopio",80,"Debe llevarlo un Pokemon. Si se mueve después del enemigo, aumenta la Precisión del Pokemon."));
-        Objetos.add(new Objetos("Roca Calor",77,"Prolonga la duración del movimiento Día Soleado que use el Pokemon que la lleva."));
-        Objetos.add(new Objetos("Vidaesfera",76,"Potencia los movimientos, pero consume PS con cada ataque. Debe llevarla un Pokemon."));
+        Objetos.add(o1); Objetos.add(o2); Objetos.add(o3); Objetos.add(o4); Objetos.add(o5);
+        Objetos.add(o6); Objetos.add(o7); Objetos.add(o8); Objetos.add(o9); Objetos.add(o10);
 
         //Instancias evolución
+        Evolution e1 = new Evolution("Colmillo Agudo",20,"Si lo lleva un Pokémon cuando inflige daño a otro, puede hacer retroceder a este último.");
+        Evolution e2 = new Evolution("Diente Marino",30,"Tiene el brillo afilado de la plata y debe llevarlo Clamperl. Sube el Ataque Especial.");
+        Evolution e3 = new Evolution("Disco Extraño",12,"Dispositivo transparente que contiene datos misteriosos. Es de fabricante desconocido.");
+        Evolution e4 = new Evolution("Escama Marina",13,"Tiene un débil brillo rosado y debe llevarla Clamperl. Sube la Defensa Especial.");
+        Evolution e5 = new Evolution("Piedra Alba",22,"Una piedra peculiar que hace evolucionar a algunos Pokémon. Brilla como un lucero.");
+        Evolution e6 = new Evolution("Piedra Solar",35,"Curiosa piedra que hace evolucionar a determinadas especies de Pokémon. Es roja como el núcleo del sol.");
+        Evolution e7 = new Evolution("Protector",60,"Dispositivo de protección muy pesado. Cierto Pokémon lo adora.");
+        Evolution e8 = new Evolution("Revestimiento Metálico",86,"Película metálica que fortalece los ataques de tipo Acero. Debe llevarlo un Pokémon.");
+        Evolution e9 = new Evolution("Magmatizador",19,"Esta caja contiene una enorme cantidad de energía magmática. Cierto Pokémon lo adora.");
+        Evolution e10 = new Evolution("Tela Terrible",100,"Tela imbuida de una energía espiritual muy potente. Cierto Pokémon la adora.");
         HashMap<String, Evolution> Evolution = new HashMap<String, Evolution>();
-        Evolution.put("e1", new Evolution("Colmillo Agudo",20,"Si lo lleva un Pokemon cuando inflige daño a otro, puede hacer retroceder a este último."));
-        Evolution.put("e2", new Evolution("Diente Marino",30,"Tiene el brillo afilado de la plata y debe llevarlo Clamperl. Sube el Ataque Especial."));
-        Evolution.put("e3", new Evolution("Dizco Extraño",12,"Dispositivo transparente que contiene datos misteriosos. Es de fabricante desconocido."));
-        Evolution.put("e4", new Evolution("Escama Marina",13,"Tiene un débil brillo rosado y debe llevarla Clamperl. Sube la Defensa Especial."));
-        Evolution.put("e5", new Evolution("Piedra Alba",22,"Una piedra peculiar que hace evolucionar a algunos Pokemon. Brilla como un lucero."));
-        Evolution.put("e6", new Evolution("Piedra Solar",35,"Curiosa piedra que hace evolucionar a determinadas especies de Pokemon. Es roja como el núcleo del sol."));
-        Evolution.put("e7", new Evolution("Protector",60,"Dispositivo de protección muy pesado. Cierto Pokemon lo adora."));
-        Evolution.put("e8", new Evolution("Revestimiento Métalico",86,"Película metálica que fortalece los ataques de tipo Acero. Debe llevarlo un Pokemon."));
-        Evolution.put("e9", new Evolution("Magmatizador",19,"Esta caja contiene una enorme cantidad de energía magmática. Cierto Pokemon lo adora."));
-        Evolution.put("e10", new Evolution("Tela Terrible",100,"Tela imbuida de una energía espiritual muy potente. Cierto Pokemon la adora."));
+        Evolution.put("Colmillo Agudo", e1); Evolution.put("Diente Marino", e2); Evolution.put("Disco Extraño", e3); Evolution.put("Escama Marina", e4);
+        Evolution.put("Piedra Alba", e5);  Evolution.put("Piedra Solar", e6); Evolution.put("Protector", e7); Evolution.put("Revestimiento Metálico", e8);
+        Evolution.put("Magmatizador", e9); Evolution.put("Tela Terrible", e10);
 
 
+        int seleccion = main.leerNumero();
+        switch(seleccion){
+            case 1:
+                //comprar
+            case 2:
+                System.out.println("Vuelve cuando quieras");
+        }
 
 
     }
+    public static int leerNumero(){
+        Scanner lector = new Scanner(System.in);
+        String entrada;
+        while (true){
+            System.out.println("Ingresa la opción");
+            entrada = lector.nextLine();
+            int valorAscii = (int)entrada.charAt(0);
+            if ( 48 <= valorAscii  && valorAscii <= 52){
+                return Integer.parseInt(entrada);
+            }else{
+                System.out.println("Entrada invalida, vuelve a intentarlo");
+            }
+        }
+    }
 }
+

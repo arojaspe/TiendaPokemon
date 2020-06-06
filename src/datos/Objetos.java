@@ -1,4 +1,4 @@
-package datos;
+	 package datos;
 
 import vista.imprimirObjetos;
 
