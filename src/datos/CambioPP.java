@@ -20,7 +20,7 @@ public class CambioPP extends Botiquin implements imprimirObjetos {
     public String getCategoria() {
         return categoria;
     }
-
+    public String getNombre(){return this.nombre;}
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }

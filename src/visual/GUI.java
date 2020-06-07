@@ -21,9 +21,6 @@ public class GUI {
 	}
 
 	public static void menuTienda(){
-		System.out.println("----------------------------------------------------------------------------");
-		System.out.println("Menú");
-		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Bienvenido a la tienda Pokemon de la Ciudad Universitaria");
 		System.out.println("En que te puedo ayudar?");
 		System.out.println("      1. Comprar");
@@ -45,5 +42,11 @@ public class GUI {
 		System.out.println("	  3. Restauración cambio de PP");
 		System.out.println("	  4. Mejora de estadísticas");
 		System.out.println("	  5. Cambio de estadísticas");
+	}
+
+	public static void mostrarElemento(String e){
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println("								"+e);
+		System.out.println("---------------------------------------------------------------------------");
 	}
 }

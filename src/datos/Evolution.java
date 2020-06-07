@@ -13,4 +13,5 @@ public class Evolution extends Producto implements imprimirObjetos {
         System.out.println("Precio: "+this.precio);
         System.out.println("Descripci�n: "+this.description);
     }
+    public String getNombre(){return this.nombre;}
 }
