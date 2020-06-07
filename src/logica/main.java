@@ -128,19 +128,19 @@ public class main {
 
             GUI.mostrarElemento("MENU");
             GUI.menuTienda();
-            int seleccion = leerNumero();
+            int seleccion = leerNumero("1","2");
 
             switch (seleccion){
                 case 1:
                     GUI.mostrarElemento("PRODUCTOS");
                     GUI.mostrarProductos();
-                    int escogerProducto = leerNumero();
+                    int escogerProducto = leerNumero("1","6");
 
                     switch (escogerProducto){
                         case 1:
                             GUI.mostrarElemento("BOTIQUIN");
                             GUI.mostrarBotiquin();
-                            int escogerBotiquin = leerNumero();
+                            int escogerBotiquin = leerNumero("1","4");
 
                             switch (escogerBotiquin){
                                 case 1:
@@ -159,6 +159,9 @@ public class main {
                                     GUI.mostrarElemento("MEJORAR ESTADISTICAS");
                                     AtomicInteger j = new AtomicInteger(1);
                                     MejorarEstadisticas.forEach(element-> System.out.println("      "+(j.getAndIncrement())+". "+element.getNombre()));
+                                    break;
+                                default:
+                                    GUI.entradaErronea();
                                     break;
                             }
                             break;
@@ -183,27 +186,36 @@ public class main {
                         case 6:
                             GUI.mostrarElemento("EVOLUCIÓN");
                             Evolution.forEach((v,k)-> System.out.println("      "+v+". "+k.getNombre()));
+                        default:
+                            GUI.entradaErronea();
+                            break;
                     }
                     break;
                 case 2:
                     control = 0;
                     System.out.println("Vuelve cuando quieras");
                     break;
+                default:
+                    GUI.entradaErronea();
+                    break;
             }
         }
     }
 
-    public static int leerNumero(){
+    public static int leerNumero(String l1, String l2){
         Scanner lector = new Scanner(System.in);
         String entrada;
+        int l1As = (int)l1.charAt(0);
+        int l2As = (int)l2.charAt(0);
         while (true){
             System.out.println("Ingresa la opción:");
+            System.out.print("      ");
             entrada = lector.nextLine();
             int valorAscii = (int)entrada.charAt(0);
-            if ( 48 <= valorAscii  && valorAscii <= 52){
+            if ( l1As <= valorAscii  && valorAscii <= l2As){
                 return Integer.parseInt(entrada);
             }else{
-                System.out.println("Entrada invalida, vuelve a intentarlo");
+                GUI.entradaErronea();
             }
         }
     }

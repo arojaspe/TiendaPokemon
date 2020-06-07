@@ -49,4 +49,10 @@ public class GUI {
 		System.out.println("								"+e);
 		System.out.println("---------------------------------------------------------------------------");
 	}
+
+	public static void entradaErronea(){
+		System.out.println("****************************************************************************");
+		System.out.println("					Entrada invalida, vuelve a intentarlo");
+		System.out.println("****************************************************************************");
+	}
 }
