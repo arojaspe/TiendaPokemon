@@ -1,11 +1,10 @@
 package datos;
 
-import vista.imprimirObjetos;
-import java.util.HashMap;
+import visual.imprimirObjetos;
 
-public class CuracionEstados extends Botiquin implements imprimirObjetos{
+public class CuracionEstados extends Botiquin implements imprimirObjetos {
 
-    private String categoria = "Curación Estados";
+    private String categoria = "Curaciï¿½n Estados";
     
 
     public CuracionEstados(String nombre, int precio,String description) {
@@ -17,6 +16,6 @@ public class CuracionEstados extends Botiquin implements imprimirObjetos{
     public void mostrar() {
         System.out.println("Nombre: "+this.nombre);
         System.out.println("Precio: "+this.precio);
-        System.out.println("Descripción: "+this.description);
+        System.out.println("Descripciï¿½n: "+this.description);
     }
 }

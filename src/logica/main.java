@@ -138,10 +138,21 @@ public class main {
 
             switch (seleccion){
                 case 1:
+
                     GUI.mostrarProductos();
                     int escogerProducto = leerNumero();
+
                     switch (escogerProducto){
                         case 1:
+
+                            GUI.mostrarBotiquin();
+                            int escogerBotiquin = leerNumero();
+
+                            switch (escogerBotiquin){
+                                case 1:
+
+                            }
+                        case 2:
 
                     }
                     break;

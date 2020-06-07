@@ -1,6 +1,6 @@
 package datos;
 
-import vista.imprimirObjetos;
+import visual.imprimirObjetos;
 
 public class Bayas extends Producto implements imprimirObjetos {
 	private String tipo = "Bayas";
@@ -13,6 +13,6 @@ public class Bayas extends Producto implements imprimirObjetos {
 	public void mostrar() {
 		System.out.println("Nombre: "+this.nombre);
 		System.out.println("Precio: "+this.precio);
-		System.out.println("Descripción: "+this.description);
+		System.out.println("Descripciï¿½n: "+this.description);
 	}
 }

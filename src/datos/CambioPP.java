@@ -1,6 +1,6 @@
 package datos;
 
-import vista.imprimirObjetos;
+import visual.imprimirObjetos;
 
 public class CambioPP extends Botiquin implements imprimirObjetos {
 
