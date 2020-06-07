@@ -14,8 +14,6 @@ public class main {
 
     public static void main(String args[]){
 
-
-
         //Instancias elementos Curación Estados
         HashMap<String, CuracionEstados> CuracionEstados = new HashMap<String, CuracionEstados>();
         CuracionEstados.put("Antihielo", new CuracionEstados("Antihielo",8,"Medicina en espray que descongela a un Pokémon."));

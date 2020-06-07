@@ -14,6 +14,6 @@ public class RecuperarVitalidad extends Botiquin implements imprimirObjetos {
     public void mostrar() {
         System.out.println("Nombre: "+this.nombre);
         System.out.println("Precio: "+this.precio);
-        System.out.println("Descripci�n: "+this.description);
+        System.out.println("Descripción: "+this.description);
     }
 }
