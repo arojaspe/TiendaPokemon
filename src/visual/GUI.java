@@ -3,6 +3,7 @@ import java.util.Scanner;
 import logica.main;
 
 
+
 public class GUI {
 
 	public static void mostrarLogo() {
@@ -45,5 +46,8 @@ public class GUI {
 		System.out.println("	  3. Restauración cambio de PP");
 		System.out.println("	  4. Mejora de estadísticas");
 		System.out.println("	  5. Cambio de estadísticas");
+	}
+	public static void mostrarCuracionEstados(){
+
 	}
 }

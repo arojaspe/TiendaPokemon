@@ -4,7 +4,7 @@ import visual.imprimirObjetos;
 
 public class CuracionEstados extends Botiquin implements imprimirObjetos {
 
-    private String categoria = "Curaci�n Estados";
+    private String categoria = "Curación Estados";
     
 
     public CuracionEstados(String nombre, int precio,String description) {
@@ -16,6 +16,6 @@ public class CuracionEstados extends Botiquin implements imprimirObjetos {
     public void mostrar() {
         System.out.println("Nombre: "+this.nombre);
         System.out.println("Precio: "+this.precio);
-        System.out.println("Descripci�n: "+this.description);
+        System.out.println("Descripción: "+this.description);
     }
 }
