@@ -123,7 +123,7 @@ public class main {
 
         GUI.mostrarLogo();
         int control = 1;
-
+        
         while (control == 1){
 
             GUI.mostrarElemento("MENU");

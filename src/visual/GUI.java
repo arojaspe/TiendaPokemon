@@ -28,6 +28,7 @@ public class GUI {
 	}
 
 	public static void mostrarProductos(){
+		System.out.println("Escoge un tipo producto:");
 		System.out.println("      1. Botiquin");
 		System.out.println("      2. Bayas");
 		System.out.println("      3. Objetos Clave");
@@ -37,6 +38,7 @@ public class GUI {
 	}
 
 	public static void mostrarBotiquin(){
+		System.out.println("Tenemos muchos  tipos de Botiquin:");
 		System.out.println("	  1. Curación de estados");
 		System.out.println("	  2. Recuperar vitalidad");
 		System.out.println("	  3. Restauración cambio de PP");
