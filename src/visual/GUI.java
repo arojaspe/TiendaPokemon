@@ -3,7 +3,6 @@ import java.util.Scanner;
 import logica.main;
 
 
-
 public class GUI {
 
 	public static void mostrarLogo() {
@@ -22,9 +21,6 @@ public class GUI {
 	}
 
 	public static void menuTienda(){
-		System.out.println("----------------------------------------------------------------------------");
-		System.out.println("Menú");
-		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("Bienvenido a la tienda Pokemon de la Ciudad Universitaria");
 		System.out.println("En que te puedo ayudar?");
 		System.out.println("      1. Comprar");
@@ -32,6 +28,7 @@ public class GUI {
 	}
 
 	public static void mostrarProductos(){
+		System.out.println("Escoge un tipo producto:");
 		System.out.println("      1. Botiquin");
 		System.out.println("      2. Bayas");
 		System.out.println("      3. Objetos Clave");
@@ -41,13 +38,22 @@ public class GUI {
 	}
 
 	public static void mostrarBotiquin(){
+		System.out.println("Tenemos muchos productos de Botiquin:");
 		System.out.println("	  1. Curación de estados");
 		System.out.println("	  2. Recuperar vitalidad");
 		System.out.println("	  3. Restauración cambio de PP");
 		System.out.println("	  4. Mejora de estadísticas");
-		System.out.println("	  5. Cambio de estadísticas");
 	}
-	public static void mostrarCuracionEstados(){
 
+	public static void mostrarElemento(String e){
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println("							  "+e);
+		System.out.println("---------------------------------------------------------------------------");
+	}
+
+	public static void entradaErronea(){
+		System.out.println("****************************************************************************");
+		System.out.println("					Entrada invalida, vuelve a intentarlo");
+		System.out.println("****************************************************************************");
 	}
 }

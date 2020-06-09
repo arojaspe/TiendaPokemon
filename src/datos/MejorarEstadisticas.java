@@ -16,4 +16,9 @@ public class MejorarEstadisticas extends Producto implements imprimirObjetos {
         System.out.println("Precio: "+this.precio);
         System.out.println("Descripci�n: "+this.description);
     }
+    public String getNombre(){
+        return this.nombre;
+    }
+    public int getPrecio() { return this.precio;}
+    public String getDescription() {return this.description;}
 }
