@@ -10,6 +10,7 @@ public class main {
 
     //Instancia carrito de compras
      static HashMap<String, Integer> carrito = new HashMap();
+     static ArrayList<Integer> precios = new ArrayList<>();
 
     public static void main(String args[]) {
 
@@ -478,11 +479,13 @@ public class main {
                 case 2:
                     //Aqui va el codigo "carrito-------------------------------------------------"
                     GUI.mostrarElemento("CARRITO");
-                    carrito.forEach((i,j)-> System.out.println("    "+i+"-------------------------------------"+j));
+                    int a = 0;
+                    carrito.forEach((i,j)-> System.out.println("    "+i+"-----------------------------"+j));
+                    pagar(sumarPrecios());
                     break;
                 case 3:
                     control = 0;
-                    System.out.println("Vuelve cuando quieras");
+                    System.out.println("      Vuelve cuando quieras");
                     break;
                 default:
                     GUI.entradaErronea();
@@ -497,7 +500,7 @@ public class main {
         int l1As = (int) l1.charAt(0);
         int l2As = (int) l2.charAt(0);
         while (true) {
-            System.out.println("Ingresa la opción:");
+            System.out.println("      Ingresa la opción:");
             System.out.print("      ");
             entrada = lector.nextLine();
             int valorAscii = (int) entrada.charAt(0);
@@ -513,7 +516,7 @@ public class main {
         Scanner lector = new Scanner(System.in);
         int entrada;
         while (true) {
-            System.out.println("Ingresa la opción:");
+            System.out.println("      Ingresa la opción:");
             System.out.print("      ");
             entrada = lector.nextInt();
             if (1 <= entrada && entrada <= limite) {
@@ -547,12 +550,10 @@ public class main {
         if (entrada == 1) {
             acepta = true;
         }else {
-            System.out.println("Está bien");
+            System.out.println("      Está bien");
         }
         return acepta;
-
     }
-
     public static void comprar(String compra, int vaLor) {
         GUI.mostrarElemento(compra);
         int costo = (darPrecio() * vaLor);
@@ -560,6 +561,41 @@ public class main {
         if (aceptar() == true) {
             System.out.println("      Aquí tienes, puedes ir a la sección de pagos");
             carrito.put(compra,costo);
+            precios.add(costo);
+        }
+    }
+    public static int sumarPrecios(){
+        int sum = 0;
+        for(int i = 0 ; i < precios.size(); i++)
+            sum += precios.get(i);
+        return sum;
+    }
+    public static void pagar(int total){
+
+        System.out.println("      En total, serían " + total +"$ \n       ¿Con qué medio de pago deseas pagar?");
+        GUI.mostrarMediosDePago();
+        int medioDePago = leerNumeroAgain(3);
+        switch (medioDePago){
+            case 1:
+                System.out.println("      Te recibo " + total +"\n       ¿Deseas bolsa?");
+                GUI.mostrarMenuBolsaPlastica();
+                int seleccionBolsa = leerNumeroAgain(2);
+                if (seleccionBolsa == 1){
+                    System.out.println("      Aquí tienes. \n       Vuelve cuando quieras.");
+                } else {
+                    System.out.println("      Está bien. \n       Vuelve cuando quieras ;D");
+                }
+                break;
+            case 2:
+                System.out.println("      Pagando con tarjetas de débito o crédito se te hace el descuento del IVA");
+                double preTotalSinIva = total - ((total*1.19)*0.19);
+                int totalSinIva = (int) preTotalSinIva;
+                System.out.println("      En total, deberás pagar " +totalSinIva);
+                System.out.println("\n      Aquí tienes, vuelve cuando quieras");
+                break;
+            case 3:
+                System.out.println("      Está bien, aquí tienes \n        Vuelve cuando quieras");
+                break;
         }
     }
 }

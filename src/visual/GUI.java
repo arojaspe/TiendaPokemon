@@ -45,6 +45,15 @@ public class GUI {
 		System.out.println("	  3. Restauración cambio de PP");
 		System.out.println("	  4. Mejora de estadísticas");
 	}
+	public static void mostrarMediosDePago(){
+		System.out.println("	  1. Efectivo");
+		System.out.println("	  2. Tarjeta débito o crédito (Sin IVA)");
+		System.out.println("	  1. Pago en especie");
+	}
+	public static void mostrarMenuBolsaPlastica(){
+		System.out.println("	  1. Sí");
+		System.out.println("	  2. No es necesario, gracias");
+	}
 
 	public static void mostrarElemento(String e){
 		System.out.println("---------------------------------------------------------------------------");
