@@ -8,6 +8,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class main {
 
+    //Instancia carrito de compras
+     static HashMap<String, Integer> carrito = new HashMap();
+
     public static void main(String args[]) {
 
         //Instancias elementos Curaci�n Estados
@@ -128,7 +131,7 @@ public class main {
 
             GUI.mostrarElemento("MENU");
             GUI.menuTienda();
-            int seleccion = leerNumero("1", "2");
+            int seleccion = leerNumero("1", "3");
 
             switch (seleccion) {
                 case 1:
@@ -473,6 +476,11 @@ public class main {
                     }
                     break;
                 case 2:
+                    //Aqui va el codigo "carrito-------------------------------------------------"
+                    GUI.mostrarElemento("CARRITO");
+                    carrito.forEach((i,j)-> System.out.println("    "+i+"-------------------------------------"+j));
+                    break;
+                case 3:
                     control = 0;
                     System.out.println("Vuelve cuando quieras");
                     break;
@@ -550,8 +558,8 @@ public class main {
         int costo = (darPrecio() * vaLor);
         System.out.println("     Eso serían: " + costo + "$" + " ¿Está bien?");
         if (aceptar() == true) {
-            System.out.println("      Aquí tienes, vuelve cuando quieras");
-
+            System.out.println("      Aquí tienes, puedes ir a la sección de pagos");
+            carrito.put(compra,costo);
         }
     }
 }

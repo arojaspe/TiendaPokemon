@@ -24,7 +24,8 @@ public class GUI {
 		System.out.println("Bienvenido a la tienda Pokemon de la Ciudad Universitaria");
 		System.out.println("En que te puedo ayudar?");
 		System.out.println("      1. Comprar");
-		System.out.println("      2. Salir");
+		System.out.println("	  2. Pago");
+		System.out.println("      3. Ya vengo(salir)");
 	}
 
 	public static void mostrarProductos(){
