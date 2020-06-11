@@ -482,6 +482,8 @@ public class main {
                     int a = 0;
                     carrito.forEach((i,j)-> System.out.println("    "+i+"-----------------------------"+j));
                     pagar(sumarPrecios());
+                    precios.clear();
+                    carrito.clear();
                     break;
                 case 3:
                     control = 0;

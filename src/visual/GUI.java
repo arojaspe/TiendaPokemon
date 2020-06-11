@@ -48,7 +48,7 @@ public class GUI {
 	public static void mostrarMediosDePago(){
 		System.out.println("	  1. Efectivo");
 		System.out.println("	  2. Tarjeta débito o crédito (Sin IVA)");
-		System.out.println("	  1. Pago en especie");
+		System.out.println("	  3. Pago en especie");
 	}
 	public static void mostrarMenuBolsaPlastica(){
 		System.out.println("	  1. Sí");
