@@ -5,6 +5,11 @@ TiendaPokemon is a Java application built using the JFrame library. It simulates
 
 ##### This project was developed as part of the "Programming with Object-Oriented Approach" course during the 2020-1 term.
 
+## Authors
+
+- [Diego Molina (dimolinas)](https://github.com/dimolinas)
+- [Andres Rojas (arojaspe)](https://github.com/arojaspe)
+
 ## Screenshots
 <img alt="1" title="TiendaPokemon" width="750" src="https://github.com/arojaspe/TiendaPokemon/blob/main/src/visual/1.PNG">
 <div style="display: inline-block;">
@@ -17,10 +22,6 @@ TiendaPokemon is a Java application built using the JFrame library. It simulates
 </div>
 <img alt="7" title="TiendaPokemon" width="750" src="https://github.com/arojaspe/TiendaPokemon/blob/main/src/visual/7.PNG">
 
-## Authors
-
-- [Diego Molina (dimolinas)](https://github.com/dimolinas)
-- [Andres Rojas (arojaspe)](https://github.com/arojaspe)
 
 ## 🛠 Tech used
 Java and its graphic library JFrame
